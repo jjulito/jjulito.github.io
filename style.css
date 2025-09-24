@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,91 +6,48 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  color: #333;
+  font-family: "Poppins", sans-serif;
+  background: #f9fafb;
+  color: #374151;
+  line-height: 1.6;
 }
 
 /* Header */
 header {
-  background: #1f2937;
-  color: #fff;
-  padding: 2rem;
   text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #a7c7e7, #fbcfe8);
+  color: #1f2937;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 header p {
-  font-size: 1.2rem;
-  color: #d1d5db;
+  font-size: 1.1rem;
+  color: #374151;
 }
 
-/* Contenedor principal */
+/* Contenedor */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 2rem;
+  padding: 3rem 2rem;
   max-width: 1200px;
   margin: auto;
 }
 
 /* Tarjetas */
 .card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
   overflow: hidden;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: scale(1.03);
-}
-
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 1rem;
-}
-
-.card-content h3 {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #1f2937;
-}
-
-.card-content p {
-  font-size: 0.95rem;
-  color: #4b5563;
-  margin: 0.5rem 0 1rem 0;
-}
-
-.card-content a {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  background: #2563eb;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-
-.card-content a:hover {
-  background: #1e40af;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #1f2937;
-  color: #9ca3af;
-}
+  transform: translateY(-6px
