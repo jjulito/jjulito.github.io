@@ -33,7 +33,7 @@ header p {
 /* Contenedor */
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 3rem 2rem;
   max-width: 1200px;
@@ -46,8 +46,82 @@ header p {
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.05);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Imagen adaptable */
+.card-image {
+  width: 100%;
+  max-height: 250px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene proporción y recorta si es necesario */
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* Contenido */
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* Botones */
+.card-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-content a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  background: #60a5fa;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+  text-align: center;
+  flex: 1;
+}
+
+.card-content a:hover {
+  background: #3b82f6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
