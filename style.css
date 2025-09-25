@@ -45,41 +45,49 @@ header {
   gap: 1rem;
 }
 
-.btn {
-  text-decoration: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: background 0.2s ease;
+.header-buttons .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: background 0.2s ease, transform 0.2s ease;
   color: white;
-  display: inline-block;
+  font-size: 1.3rem; 
+  text-decoration: none;
 }
 
-.github {
+.header-buttons .btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Colores de cada botón del header */
+.header-buttons .github {
   background: #333;
 }
-.github:hover {
+.header-buttons .github:hover {
   background: #000;
 }
 
-.linkedin {
+.header-buttons .linkedin {
   background: #0077b5;
 }
-.linkedin:hover {
+.header-buttons .linkedin:hover {
   background: #005582;
 }
 
-.whatsapp {
+.header-buttons .whatsapp {
   background: #25d366;
 }
-.whatsapp:hover {
+.header-buttons .whatsapp:hover {
   background: #1ebc57;
 }
 
-.email {
+.header-buttons .email {
   background: #f97316;
 }
-.email:hover {
+.header-buttons .email:hover {
   background: #d4620f;
 }
 
