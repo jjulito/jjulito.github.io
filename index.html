@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio de Julián</title>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,98 +11,82 @@
 </head>
 <body>
   <header>
-  <div class="header-content">
-    <div class="intro">
-      <h1>Hola, soy Julián</h1>
-      <p>Estudiante de Ingeniería en Sistemas con sólida formación en programación. Interés en desarrollo de software y análisis de datos. Rápido aprendizaje, orientación a resultados y motivación por aportar en proyectos de innovación tecnológica.</p>
-    </div>
-   <div class="header-buttons">
-  <a href="https://github.com/jjulito" target="_blank" class="btn github">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/octavio-mosqueda-757395278/" target="_blank" class="btn linkedin">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://wa.me/542915780286" target="_blank" class="btn whatsapp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="mailto:octaviomosq26@gmail.com" class="btn email">
-    <i class="fas fa-envelope"></i>
-  </a>
-</div>
-
-  </div>
-</header>
-
- <main class="carousel">
-  <button class="carousel-btn left">&#10094;</button>
-  <div class="carousel-track">
-    <!-- Proyecto -->
-    <div class="card">
-      <div class="card-image">
-        <img src="img/proyecto1.png" alt="Vista previa Proyecto 1">
+    <div class="header-content">
+      <div class="intro">
+        <h1>Hola, soy Julián</h1>
+        <p>Estudiante de Ingeniería en Sistemas con sólida formación en programación. Interés en desarrollo de software y análisis de datos. Rápido aprendizaje, orientación a resultados y motivación por aportar en proyectos de innovación tecnológica.</p>
       </div>
-      <div class="card-content">
-        <h3>CRUD de usuarios con PHP y MySQL. Responsive y con panel administrativo.</h3>
-        <p>Proyecto Backend en Node.js + Express</p>
-        <div class="card-buttons">
-          <a href="https://jjulito.github.io/crud-usuarios/" target="_blank">Ver proyecto</a>
-          <a href="https://github.com/jjulito/crud-usuarios" target="_blank">Ver código</a>
-        </div>
+      <div class="header-buttons">
+        <a href="https://github.com/jjulito" target="_blank" class="btn github"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/octavio-mosqueda-757395278/" target="_blank" class="btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/542915780286" target="_blank" class="btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:octaviomosq26@gmail.com" class="btn email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-
-    <!-- Proyecto -->
-    <div class="card">
-      <div class="card-image">
-        <img src="img/proyecto2.png" alt="Vista previa Proyecto 2">
-      </div>
-      <div class="card-content">
-        <h3>Recetario utilizando HTML, CSS, JavaScript y frameworks</h3>
-        <p>Proyecto Frontend + Rest API</p>
-        <div class="card-buttons">
-          <a href="https://jjulito.github.io/web-recetas/" target="_blank">Ver proyecto</a>
-          <a href="https://github.com/jjulito/web-recetas" target="_blank">Ver código</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Proyecto -->
-    <div class="card">
-      <div class="card-image">
-        <img src="img/proyecto3.png" alt="Vista previa Proyecto 3">
-      </div>
-      <div class="card-content">
-        <h3>Supermarket Demo con React, Bootstrap y API externa</h3>
-        <p>Aplicación Fullstack con Frontend y Backend simulando un comercio virtual</p>
-        <div class="card-buttons">
-          <a href="https://jjulito.github.io/supermercado/#/" target="_blank">Ver proyecto</a>
-          <a href="https://github.com/jjulito/supermercado" target="_blank">Ver código</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Proyecto -->
-    <div class="card">
-      <div class="card-image">
-        <img src="img/proyecto4.png" alt="Vista previa Proyecto 4">
-      </div>
-      <div class="card-content">
-        <h3>Gestor de tareas tipo TO DO LIST en Python ejecutado como CLI</h3>
-        <p>Gestor de tareas simple hecho en Python</p>
-        <div class="card-buttons">
-          <a href="https://github.com/jjulito/tareas" target="_blank">Ver código</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-btn right">&#10095;</button>
-   
-</main>
+  </header>
   
+  <main class="carousel-container">
+    <button class="carousel-btn left">&#10094;</button>
+
+    <div class="carousel">
+      <div class="carousel-track">
+        <!-- Proyecto -->
+        <div class="card">
+          <div class="card-image"><img src="img/proyecto1.png" alt="Vista previa Proyecto 1"></div>
+          <div class="card-content">
+            <h3>CRUD de usuarios con PHP y MySQL. Responsive y con panel administrativo.</h3>
+            <p>Proyecto Backend en Node.js + Express</p>
+            <div class="card-buttons">
+              <a href="https://jjulito.github.io/crud-usuarios/" target="_blank">Ver proyecto</a>
+              <a href="https://github.com/jjulito/crud-usuarios" target="_blank">Ver código</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image"><img src="img/proyecto2.png" alt="Vista previa Proyecto 2"></div>
+          <div class="card-content">
+            <h3>Recetario utilizando HTML, CSS, JavaScript y frameworks</h3>
+            <p>Proyecto Frontend + Rest API</p>
+            <div class="card-buttons">
+              <a href="https://jjulito.github.io/web-recetas/" target="_blank">Ver proyecto</a>
+              <a href="https://github.com/jjulito/web-recetas" target="_blank">Ver código</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image"><img src="img/proyecto3.png" alt="Vista previa Proyecto 3"></div>
+          <div class="card-content">
+            <h3>Supermarket Demo con React, Bootstrap y API externa</h3>
+            <p>Aplicación Fullstack con Frontend y Backend simulando un comercio virtual</p>
+            <div class="card-buttons">
+              <a href="https://jjulito.github.io/supermercado/#/" target="_blank">Ver proyecto</a>
+              <a href="https://github.com/jjulito/supermercado" target="_blank">Ver código</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image"><img src="img/proyecto4.png" alt="Vista previa Proyecto 4"></div>
+          <div class="card-content">
+            <h3>Gestor de tareas tipo TO DO LIST en Python ejecutado como CLI</h3>
+            <p>Gestor de tareas simple hecho en Python</p>
+            <div class="card-buttons">
+              <a href="https://github.com/jjulito/tareas" target="_blank">Ver código</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-btn right">&#10095;</button>
+  </main>
+
   <footer>
     <p>© 2025 - Julito</p>
   </footer>
-  <script src=script.js>
+
+  <script src="script.js"></script>
 </body>
 </html>
