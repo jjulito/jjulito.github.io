@@ -187,13 +187,13 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Carrusel */
 .carousel-container {
   display: flex;
   align-items: center;
   max-width: 1200px;
   margin: auto;
   gap: 10px;
+  position: relative;
 }
 
 .carousel {
@@ -223,15 +223,28 @@ footer {
 
 /* Botones laterales */
 .carousel-btn {
-  background: #111827cc;
+  background: rgba(17, 24, 39, 0.8);
   color: white;
   border: none;
   font-size: 2rem;
-  padding: 10px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background 0.3s ease;
 }
 
 .carousel-btn:hover {
-  background: #111827;
+  background: rgba(17, 24, 39, 1);
+}
+
+.carousel-btn.left {
+  left: -40px;
+}
+
+.carousel-btn.right {
+  right: -40px;
 }
