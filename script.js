@@ -3,16 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnLeft = document.querySelector(".carousel-btn.left");
   const btnRight = document.querySelector(".carousel-btn.right");
 
-  const cards = Array.from(track.children);
-  const cardWidth = cards[0].getBoundingClientRect().width + 20;
+  let cards = Array.from(track.children);
+  let cardWidth = cards[0].getBoundingClientRect().width + 20;
 
-  const clonesBefore = cards.slice(-2).map(card => card.cloneNode(true));
-  const clonesAfter = cards.slice(0, 2).map(card => card.cloneNode(true));
+  const clonesBefore = cards.map(card => card.cloneNode(true));
+  const clonesAfter = cards.map(card => card.cloneNode(true));
 
   clonesBefore.forEach(clone => track.insertBefore(clone, track.firstChild));
   clonesAfter.forEach(clone => track.appendChild(clone));
 
-  let index = 2;
+  cards = Array.from(track.children); 
+  let index = cards.length / 3; 
   track.style.transform = `translateX(-${cardWidth * index}px)`;
 
   function moveToIndex(newIndex) {
@@ -30,24 +31,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   track.addEventListener("transitionend", () => {
-    const cardsInTrack = Array.from(track.children);
+    const totalCards = cards.length;
+    const originalCardsCount = totalCards / 3;
 
-    if (index >= cardsInTrack.length - 2) {
+    if (index >= originalCardsCount * 2) {
       track.style.transition = "none";
-      index = 2;
+      index = originalCardsCount;
       track.style.transform = `translateX(-${cardWidth * index}px)`;
     }
 
-    if (index < 2) {
+    if (index < originalCardsCount) {
       track.style.transition = "none";
-      index = cardsInTrack.length - 4;
+      index = originalCardsCount * 2 - 1;
       track.style.transform = `translateX(-${cardWidth * index}px)`;
     }
   });
 
   window.addEventListener("resize", () => {
+    cardWidth = cards[0].getBoundingClientRect().width + 20;
     track.style.transition = "none";
-    const newCardWidth = cards[0].getBoundingClientRect().width + 20;
-    track.style.transform = `translateX(-${newCardWidth * index}px)`;
+    track.style.transform = `translateX(-${cardWidth * index}px)`;
   });
 });
