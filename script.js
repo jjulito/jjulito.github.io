@@ -1,64 +1,38 @@
-const track = document.querySelector('.carousel-track');
-const btnLeft = document.querySelector('.carousel-btn.left');
-const btnRight = document.querySelector('.carousel-btn.right');
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const btnLeft = document.querySelector(".carousel-btn.left");
+  const btnRight = document.querySelector(".carousel-btn.right");
 
-let index = 0;
-const cards = Array.from(track.children);
+  const cards = Array.from(track.children);
+  let index = 0;
+  let cardWidth = cards[0].getBoundingClientRect().width + 20;
 
-cards.forEach(card => {
-  const cloneFirst = card.cloneNode(true);
-  const cloneLast = card.cloneNode(true);
-  track.appendChild(cloneFirst);
-  track.insertBefore(cloneLast, track.firstChild);
-});
-
-const allCards = Array.from(track.children);
-let cardWidth = cards[0].getBoundingClientRect().width + 20;
-
-function updateCarousel() {
-  track.style.transition = "transform 0.5s ease";
-  track.style.transform = `translateX(-${(index + 1) * cardWidth}px)`;
-}
-
-btnRight.addEventListener('click', () => {
-  if (index >= cards.length) {
-    index = 0;
-    track.style.transition = "none";
-    track.style.transform = `translateX(-${cardWidth}px)`;
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        track.style.transition = "transform 0.5s ease";
-        index++;
-        updateCarousel();
-      });
-    });
-  } else {
-    index++;
-    updateCarousel();
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
   }
-});
 
-btnLeft.addEventListener('click', () => {
-  if (index <= -1) {
-    index = cards.length - 1;
-    track.style.transition = "none";
-    track.style.transform = `translateX(-${cards.length * cardWidth}px)`;
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        track.style.transition = "transform 0.5s ease";
-        index--;
-        updateCarousel();
-      });
-    });
-  } else {
-    index--;
+  btnRight.addEventListener("click", () => {
+    if (index < cards.length - 1) {
+      index++;
+    } else {
+      index = 0; 
+    }
     updateCarousel();
-  }
-});
+  });
 
-window.addEventListener('resize', () => {
-  cardWidth = cards[0].getBoundingClientRect().width + 20;
+  btnLeft.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+    } else {
+      index = cards.length - 1; 
+    }
+    updateCarousel();
+  });
+
+  window.addEventListener("resize", () => {
+    cardWidth = cards[0].getBoundingClientRect().width + 20;
+    updateCarousel();
+  });
+
   updateCarousel();
 });
-
-updateCarousel();
