@@ -12,6 +12,8 @@ const translations = {
         "project3-desc": "Aplicación Fullstack con Frontend y Backend simulando un comercio virtual",
         "project4-title": "Gestor de tareas tipo TO DO LIST en Python ejecutado como CLI",
         "project4-desc": "Gestor de tareas simple hecho en Python",
+        "project5-title": "Spotify Clone - Aplicación Full Stack con React & Node.js",
+        "project5-desc": "Clon de Spotify desarrollado con React 18, TypeScript y Express.js. Implementa reproductor de audio, gestión de playlists, búsqueda en tiempo real y despliegue multi-plataforma.",
         "view-project": "Ver proyecto",
         "view-code": "Ver código",
         "footer-text": "© 2025 - Julito"
@@ -28,6 +30,8 @@ const translations = {
         "project3-desc": "Fullstack Application with Frontend and Backend simulating e-commerce",
         "project4-title": "TO DO LIST Task Manager in Python running as CLI",
         "project4-desc": "Simple task manager built with Python",
+        "project5-title": "Spotify Clone - Full Stack React & Node.js Application",
+        "project5-desc": "Spotify replica built with React 18, TypeScript, and Express.js. Features audio player, playlist management, real-time search, and multi-platform deployment.",
         "view-project": "View project",
         "view-code": "View code",
         "footer-text": "© 2025 - Julito"
